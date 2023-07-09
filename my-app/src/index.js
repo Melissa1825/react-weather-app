@@ -27,6 +27,10 @@ root.render(
     <hr></hr>
     <Sixday />
     </div>
+    
+    <div className='codeLink'>
+    <span><a href='https://github.com/Melissa1825/react-weather-app' target='_blank' rel='noreferrer'>Open-source code</a>, by Melissa</span>
+    </div>
   </React.StrictMode>
 );
 
