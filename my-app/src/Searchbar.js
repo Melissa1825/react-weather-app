@@ -6,10 +6,12 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faWind } from '@fortawesome/free-solid-svg-icons'
 import { faDroplet } from '@fortawesome/free-solid-svg-icons'
 
+import FormatDate from './FormatDate';
+
 
 import axios from 'axios';
 
-export default function Search() {
+export default function Search(props) {
   const [weather, setWeather] = useState({loaded: false});
 
   function handleResponse(response) {
@@ -17,7 +19,7 @@ export default function Search() {
 
     setWeather({
       loaded: true,
-      date: "Wednesday, June 28, 12:30",
+      date: new Date(response.data.dt * 1000), 
       city: response.data.name,
       temp: response.data.main.temp,
       desc: response.data.weather[0].description,
@@ -38,7 +40,7 @@ export default function Search() {
           </form>
         </div>  
 
-        <h6>{weather.date}</h6>
+        <h6><FormatDate date={weather.date}/></h6>
 
         <div className="locationIcon">
         <div>
