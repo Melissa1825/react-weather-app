@@ -19,5 +19,5 @@ export default function FormatDate(props) {
         min = `0${min}`;
     }
 
-    return <div>{weekDay}, {month} {date} - {hours}:{min}</div>
+    return <div>{weekDay}, {month} {date}  {hours}:{min}</div>
 }
