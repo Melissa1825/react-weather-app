@@ -4,12 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import Temps from './Temps';
 import Searchbar from './Searchbar';
-import Feel from './Feel';
-import Details from './Details';
-import Date from './Date';
-import City from './City';
 import Sixday from './Sixday';
 
 import reportWebVitals from './reportWebVitals';
@@ -19,11 +14,6 @@ root.render(
   <React.StrictMode>
     <div className='container'>
     <Searchbar />
-    <Date />
-    <City />
-    <Temps />
-    <Feel />
-    <Details />
     <hr></hr>
     <Sixday />
     </div>
